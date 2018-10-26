@@ -57,7 +57,7 @@ type Props = {
   },
   knotsStore: { knotName: string, uuid: string, knotLoaded: boolean },
   history: { push: (path: string) => void },
-  location: { state?: {} },
+  location: { state?: { name?: string } },
   selectTap: (tap: TapPropertiesType) => void,
   submitConfig: (
     selectedTap: TapPropertiesType,

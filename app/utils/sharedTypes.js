@@ -24,6 +24,19 @@
  * KNOT
  */
 
+export type SpecImplementationPropType = {
+  usesMetadata?: {
+    selected?: boolean,
+    replicationKey?: boolean,
+    replicationMethod?: boolean
+  },
+  usesCatalogArg?: boolean,
+  usesReplication?: boolean,
+  mustSeedState?: {
+    stateType: string
+  }
+};
+
 export type TapPropertiesType = {
   name: string,
   image: string,
@@ -141,16 +154,6 @@ export type UpdateTapField = (
 export type UpdateFormValidation = (tap: string, value: boolean) => void;
 
 export type FieldState = { validation: {}, errorMessage: string };
-
-export type SpecImplementationPropType = {
-  usesMetadata?: {
-    selected?: boolean,
-    replicationKey?: boolean,
-    replicationMethod?: boolean
-  },
-  usesCatalogArg?: boolean,
-  usesReplication?: boolean
-};
 
 /**
  * STATE

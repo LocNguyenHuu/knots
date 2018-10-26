@@ -52,7 +52,6 @@ export const RESET_KNOT_ERROR = 'RESET_KNOT_ERROR';
 export const GENERATED_UUID = 'GENERATED_UUID';
 export const SEED_STATE = 'SEED_STATE';
 export const UPDATE_TAP_STATE_VALUE = 'UPDATE_TAP_STATE_VALUE';
-export const SEEDING_STATE = 'SEEDING_STATE';
 
 type actionType = {
   +type: string
@@ -268,7 +267,7 @@ export function downloadKnot(knot: string) {
       .catch();
 }
 
-export function loadValues(knot: string, uuid: string, seedingState?: boolean) {
+export function loadValues(knot: string, uuid: string) {
   return (dispatch: (action: actionType) => void) => {
     dispatch({
       type: LOADING_KNOT
@@ -276,27 +275,15 @@ export function loadValues(knot: string, uuid: string, seedingState?: boolean) {
     return axios
       .post(`${baseUrl}/knots/load`, { knot, uuid })
       .then((response) => {
-        if (seedingState) {
-          dispatch({
-            type: SEEDING_STATE,
-            tap: response.data.tap,
-            target: response.data.target,
-            tapConfig: response.data.tapConfig,
-            targetConfig: response.data.targetConfig,
-            knotName: response.data.name,
-            schema: response.data.schema
-          });
-        } else {
-          dispatch({
-            type: LOADED_KNOT,
-            tap: response.data.tap,
-            target: response.data.target,
-            tapConfig: response.data.tapConfig,
-            targetConfig: response.data.targetConfig,
-            knotName: response.data.name,
-            schema: response.data.schema
-          });
-        }
+        dispatch({
+          type: LOADED_KNOT,
+          tap: response.data.tap,
+          target: response.data.target,
+          tapConfig: response.data.tapConfig,
+          targetConfig: response.data.targetConfig,
+          knotName: response.data.name,
+          schema: response.data.schema
+        });
       })
       .catch((error) => {
         dispatch({

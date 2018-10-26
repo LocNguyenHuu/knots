@@ -49,13 +49,22 @@ type Props = {
   dockerInstalled: boolean,
   dockerRunning: boolean,
   tapSeededState: {},
-  history: { push: (path: string) => void },
+  history: {
+    push: (
+      path:
+        | string
+        | {
+            pathname: string,
+            state: {}
+          }
+    ) => void
+  },
   loadKnot: (name: string) => void,
   loadValues: (name: string, uuid: string, seedingState?: boolean) => void,
   generateUUID: () => void,
   toggleDelete: (knot: KnotType) => void,
   toggleDownloadDisclaimer: (knot: KnotType) => void,
-  submitStateDate: (selectedDate, seedStateType) => void,
+  submitStateDate: (selectedDate: string, seedStateType: string) => void,
   seedState: () => void
 };
 
@@ -78,7 +87,7 @@ class Knot extends Component<Props, State> {
 
   partialSync = () => {
     const { knot } = this.props;
-    const { mustSeedState } = knot.tap.specImplementation;
+    const { mustSeedState } = knot.tap.specImplementation || {};
 
     if (mustSeedState) {
       this.setState({ showModal: true });
@@ -129,9 +138,7 @@ class Knot extends Component<Props, State> {
 
   render() {
     const { knot, dockerInstalled, dockerRunning } = this.props;
-    const { specImplementation } = knot.tap;
-    const { usesReplication: usesReplication = true } =
-      specImplementation || {};
+
     return (
       <tr key={knot.name}>
         <td className="align-middle text-center pr-0">
@@ -163,7 +170,7 @@ class Knot extends Component<Props, State> {
               data-placement="top"
               title="Sync new data"
               onClick={this.partialSync}
-              disabled={!dockerInstalled || !dockerRunning || !usesReplication}
+              disabled={!dockerInstalled || !dockerRunning}
             >
               <span className="oi oi-media-play" />
             </Button>

@@ -36,8 +36,7 @@ import {
   DOCKER_RUNNING,
   RESET_STORE,
   RESET_KNOT_ERROR,
-  GENERATED_UUID,
-  SEEDING_STATE
+  GENERATED_UUID
 } from '../actions/knots';
 
 export type knotsStateType = {
@@ -179,12 +178,6 @@ export default function knots(state = defaultState(), action) {
     case GENERATED_UUID:
       return Object.assign({}, state, {
         uuid: action.uuid
-      });
-    case SEEDING_STATE:
-      return Object.assign({}, state, {
-        knotName: action.knotName,
-        knotError: action.error || '',
-        schema: action.schema
       });
     case RESET_STORE:
       // Fact that objects are passed by reference makes this necessary, open to other suggestions

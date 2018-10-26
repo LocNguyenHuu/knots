@@ -243,21 +243,4 @@ describe('knots reducer', () => {
       })
     );
   });
-
-  it('should handle SEEDING_STATE', () => {
-    expect(
-      knotReducer(undefined, {
-        type: knotActions.SEEDING_STATE,
-        knotName: 'knot1',
-        knotError: '',
-        schema: []
-      })
-    ).toEqual(
-      Object.assign({}, defaultState(), {
-        knotName: 'knot1',
-        knotError: '',
-        schema: []
-      })
-    );
-  });
 });
