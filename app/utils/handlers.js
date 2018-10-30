@@ -21,13 +21,15 @@
 // @flow
 
 import { shell } from 'electron';
+import { get } from 'lodash';
 import type {
   RedshiftState,
   PostgresState,
   SalesforceState,
   AdwordsState,
   MySQLState,
-  FacebookState
+  FacebookState,
+  SpecImplementation
 } from './sharedTypes';
 
 // $FlowFixMe
@@ -131,3 +133,8 @@ export const validateFields = (
     }
   });
 };
+
+export const getSpecImplementationValue = (
+  specImplementation: SpecImplementation,
+  field: string
+) => get(specImplementation, field);

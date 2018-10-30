@@ -176,3 +176,15 @@ export const sampleStream1 = {
     }
   ]
 };
+
+export const sampleSpecImplementation = {
+  usesMetadata: {
+    selected: true,
+    replication_key: false,
+    replication_method: 0
+  },
+  usesCatalogArg: false,
+  mustSeedState: {
+    stateType: 'stream'
+  }
+};

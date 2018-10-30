@@ -20,6 +20,18 @@
  */
 // @flow
 
+export type SpecImplementation = {
+  usesMetadata?: {
+    selected?: boolean,
+    replicationKey?: boolean,
+    replicationMethod?: boolean
+  },
+  usesCatalogArg?: boolean,
+  mustSeedState?: {
+    stateType?: 'stream'
+  }
+};
+
 /**
  * KNOT
  */
@@ -27,7 +39,7 @@
 export type TapPropertiesType = {
   name: string,
   image: string,
-  specImplementation?: SpecImplementationPropType
+  specImplementation?: SpecImplementation
 };
 
 export type TargetPropertiesType = {
@@ -141,16 +153,6 @@ export type UpdateTapField = (
 export type UpdateFormValidation = (tap: string, value: boolean) => void;
 
 export type FieldState = { validation: {}, errorMessage: string };
-
-export type SpecImplementationPropType = {
-  usesMetadata?: {
-    selected?: boolean,
-    replicationKey?: boolean,
-    replicationMethod?: boolean
-  },
-  usesCatalogArg?: boolean,
-  usesReplication?: boolean
-};
 
 /**
  * STATE

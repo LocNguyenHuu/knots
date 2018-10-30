@@ -34,7 +34,16 @@ type Props = {
   knot: KnotType,
   dockerInstalled: boolean,
   dockerRunning: boolean,
-  history: { push: (path: string) => void },
+  history: {
+    push: (
+      path:
+        | string
+        | {
+            pathname: string,
+            state: {}
+          }
+    ) => void
+  },
   loadKnot: (name: string) => void,
   generateUUID: () => void,
   toggleDelete: (knot: KnotType) => void,
@@ -65,9 +74,7 @@ class Knot extends Component<Props> {
 
   render() {
     const { knot, dockerInstalled, dockerRunning } = this.props;
-    const { specImplementation } = knot.tap;
-    const { usesReplication: usesReplication = true } =
-      specImplementation || {};
+
     return (
       <tr key={knot.name}>
         <td className="align-middle text-center pr-0">
@@ -99,7 +106,7 @@ class Knot extends Component<Props> {
               data-placement="top"
               title="Sync new data"
               onClick={this.partialSync}
-              disabled={!dockerInstalled || !dockerRunning || !usesReplication}
+              disabled={!dockerInstalled || !dockerRunning}
             >
               <span className="oi oi-media-play" />
             </Button>
