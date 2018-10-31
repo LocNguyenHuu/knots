@@ -138,3 +138,16 @@ export const getSpecImplementationValue = (
   specImplementation: ?SpecImplementation,
   field: string
 ) => get(specImplementation, field);
+
+export const getStateDate = (state?: {}): string => {
+  if (!state) {
+    return '';
+  }
+  const stateFields = Object.keys(state);
+
+  if (stateFields.length < 1) {
+    return '';
+  }
+
+  return formatDate(state[stateFields[0]]);
+};

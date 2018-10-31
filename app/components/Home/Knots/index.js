@@ -50,6 +50,9 @@ type Props = {
     knotError: string,
     knotLoaded: boolean
   },
+  tapStore: {
+    stateDate: string
+  },
   dockerInstalled: boolean,
   dockerRunning: boolean,
   history: { push: (path: string) => void },
@@ -187,6 +190,7 @@ class Knots extends Component<Props, State> {
                 <Input
                   type="date"
                   onChange={this.handleReplicationDateChange}
+                  value={this.props.tapStore.stateDate}
                 />
                 <FormFeedback>Required</FormFeedback>
                 <FormText>

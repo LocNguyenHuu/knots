@@ -107,6 +107,7 @@ describe('Home component', () => {
         knotError: false,
         knotLoaded: false
       },
+      tapStore: { stateDate: '' },
       dockerInstalled: true,
       dockerRunning: true,
       deleteKnot: () => {},
@@ -135,6 +136,7 @@ describe('Home component', () => {
         knotError: false,
         knotLoaded: false
       },
+      tapStore: { stateDate: '' },
       dockerInstalled: false,
       dockerRunning: false,
       deleteKnot: () => {},
@@ -163,6 +165,7 @@ describe('Home component', () => {
         knotError: false,
         knotLoaded: false
       },
+      tapStore: { stateDate: '' },
       dockerInstalled: true,
       dockerRunning: false,
       deleteKnot: () => {},

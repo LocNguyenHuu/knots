@@ -28,7 +28,8 @@ import Knots from '../components/Home/Knots';
 
 function mapStateToProps(state) {
   return {
-    knotsStore: state.knots
+    knotsStore: state.knots,
+    tapStore: state.taps
   };
 }
 
