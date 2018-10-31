@@ -60,7 +60,8 @@ type Props = {
   loadKnot: (knot: string) => void,
   generateUUID: () => void,
   toggleDelete: (knot: KnotType) => void,
-  toggleDownloadDisclaimer: (knot: KnotType) => void
+  toggleDownloadDisclaimer: (knot: KnotType) => void,
+  loadState: (knot: string) => void
 };
 
 type State = {
@@ -169,6 +170,7 @@ class Knots extends Component<Props, State> {
                   toggleDownloadDisclaimer={this.props.toggleDownloadDisclaimer}
                   generateUUID={this.props.generateUUID}
                   toggleModal={this.toggleModal}
+                  loadState={this.props.loadState}
                 />
               ))}
             </tbody>

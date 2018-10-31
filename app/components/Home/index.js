@@ -147,7 +147,8 @@ export default class Home extends Component<Props, State> {
                       {dockerInstalled
                         ? 'Wake up, Docker!'
                         : 'Where are you, Docker?'}
-                    </strong>&nbsp; Please make sure that Docker is{' '}
+                    </strong>
+                    &nbsp; Please make sure that Docker is{' '}
                     {dockerInstalled ? 'running' : 'installed'}
                     &nbsp;and try again.
                     <br />
@@ -244,7 +245,7 @@ export default class Home extends Component<Props, State> {
             <Button
               color="primary"
               onClick={() => {
-                this.props.deleteKnot(this.state.knot.name);
+                this.props.deleteKnot(this.state.knot.name || '');
                 this.toggleDelete();
               }}
             >
@@ -275,7 +276,7 @@ export default class Home extends Component<Props, State> {
             <Button
               color="primary"
               onClick={() => {
-                this.props.downloadKnot(this.state.knot.name);
+                this.props.downloadKnot(this.state.knot.name || '');
                 this.toggleDownloadDisclaimer();
               }}
             >

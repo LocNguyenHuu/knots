@@ -23,7 +23,7 @@
 
 import axios from 'axios';
 import type {
-  SpecImplementationPropType,
+  SpecImplementation,
   TapPropertiesType
 } from '../utils/sharedTypes';
 import type { TapConfigType } from '../components/Taps/TapConfiguration';
@@ -50,6 +50,8 @@ export const UPDATE_SCHEMA_LOGS = 'UPDATE_SCHEMA_LOGS';
 export const TAP_SELECTED = 'TAP_SELECTED';
 export const UPDATE_FORM_VALIDATION = 'UPDATE_FORM_VALIDATION';
 export const MODIFY_SCHEMA = 'MODIFY_SCHEMA';
+
+export const LOADED_TAP_STATE = 'LOADED_TAP_STATE';
 
 type actionType = {
   +type: string
@@ -190,7 +192,7 @@ export function editSchemaField(
   field: string,
   index: string,
   value: boolean | string,
-  specImplementation?: SpecImplementationPropType = {}
+  specImplementation?: SpecImplementation = {}
 ) {
   return (dispatch: (action: actionType) => void) => {
     dispatch({
@@ -242,7 +244,11 @@ export function updateFormValidation(tap: string, value: boolean) {
   };
 }
 
-export function modifySchema(streamIndex: number, field: string, value: Array) {
+export function modifySchema(
+  streamIndex: number,
+  field: string,
+  value: Array<{}>
+) {
   return (dispatch: (action: actionType) => void) => {
     dispatch({
       type: MODIFY_SCHEMA,
@@ -251,4 +257,21 @@ export function modifySchema(streamIndex: number, field: string, value: Array) {
       value
     });
   };
+}
+
+export function loadState(knot: string) {
+  return (dispatch: (action: actionType) => void) =>
+    axios
+      .post(`${baseUrl}/knots/loadstate`, { knot })
+      .then((response) => {
+        dispatch({
+          type: LOADED_TAP_STATE,
+          state: response.data.state
+        });
+      })
+      .catch(() => {
+        dispatch({
+          type: LOADED_TAP_STATE
+        });
+      });
 }

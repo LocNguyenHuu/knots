@@ -34,7 +34,8 @@ import {
   UPDATE_TAP_FIELD,
   UPDATE_TAPS,
   UPDATE_FORM_VALIDATION,
-  MODIFY_SCHEMA
+  MODIFY_SCHEMA,
+  LOADED_TAP_STATE
 } from '../actions/taps';
 import { LOADED_KNOT, RESET_STORE, LOADED_KNOT_JSON } from '../actions/knots';
 import type {
@@ -56,6 +57,7 @@ export type tapsStateType = {
   +taps: Array<string>,
   +selectedTap: TapPropertiesType,
   +schema: Array<{}>,
+  +state: {},
   +schemaLogs: Array<string>,
   +schemaUpdated: boolean,
   +error: string,
@@ -83,6 +85,7 @@ export function defaultState() {
     taps: [],
 
     schema: [],
+    state: {},
     schemaUpdated: false,
     error: '',
     'tap-redshift': {
@@ -404,6 +407,10 @@ export default function taps(state = defaultState(), action) {
     case LOADED_KNOT_JSON:
       return Object.assign({}, state, {
         selectedTap: action.tap
+      });
+    case LOADED_TAP_STATE:
+      return Object.assign({}, state, {
+        state: action.state
       });
     case UPDATE_FORM_VALIDATION:
       return Object.assign({}, state, {

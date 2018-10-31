@@ -344,6 +344,30 @@ const loadKnot = (knot) =>
       .catch(reject);
   });
 
+const loadState = (knot) =>
+  new Promise((resolve, reject) => {
+    const latestStatePath = path.resolve(
+      getKnotsFolder(),
+      knot,
+      'tap',
+      'latest-state.json'
+    );
+
+    readFile(latestStatePath)
+      .then((stateString) => {
+        try {
+          const stateJson = JSON.parse(stateString);
+
+          resolve({
+            state: stateJson
+          });
+        } catch (error) {
+          reject(error);
+        }
+      })
+      .catch(reject);
+  });
+
 const terminateSync = () => {
   if (runningProcess) {
     return runningProcess.pid;
@@ -369,6 +393,7 @@ module.exports = {
   downloadKnot,
   loadValues,
   loadKnot,
+  loadState,
   terminateSync,
   cancel
 };

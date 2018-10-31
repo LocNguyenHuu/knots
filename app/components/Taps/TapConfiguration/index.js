@@ -32,8 +32,8 @@ import MySQL from '../../../containers/MySQL';
 import Facebook from '../../../containers/Facebook';
 import S3 from '../../../containers/S3';
 
-type TapConfigType<T> = {
-  fieldValues: T & {
+type TapConfigType = {
+  fieldValues: {
     start_date: string
   },
   valid?: boolean

@@ -30,6 +30,7 @@ const {
   downloadKnot,
   loadValues,
   loadKnot,
+  loadState,
   cancel
 } = require('../knots');
 
@@ -114,6 +115,19 @@ router.post('/loadknot/', (req, res) => {
       res.json(result);
     })
     .catch((error) => {
+      res.status(500).json({ message: error.message });
+    });
+});
+
+router.post('/loadstate/', (req, res) => {
+  const { knot } = req.body;
+
+  loadState(knot)
+    .then((result) => {
+      res.json(result);
+    })
+    .catch((error) => {
+      console.log('The error', error);
       res.status(500).json({ message: error.message });
     });
 });

@@ -35,4 +35,7 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators(KnotsActions, dispatch);
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Home);

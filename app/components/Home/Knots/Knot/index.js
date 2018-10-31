@@ -49,14 +49,15 @@ type Props = {
   generateUUID: () => void,
   toggleDelete: (knot: KnotType) => void,
   toggleDownloadDisclaimer: (knot: KnotType) => void,
-  toggleModal: () => void
+  toggleModal: () => void,
+  loadState: (knot: string) => void
 };
 
 class Knot extends Component<Props> {
   fullSync = () => {
     const { knot } = this.props;
-    this.props.history.push(`/saved-sync?knot=${knot.name}&mode=full`);
-    this.props.loadKnot(knot.name);
+    this.props.history.push(`/saved-sync?knot=${knot.name || ''}&mode=full`);
+    this.props.loadKnot(knot.name || '');
   };
 
   partialSync = () => {
@@ -66,11 +67,13 @@ class Knot extends Component<Props> {
       'mustSeedState'
     );
 
+    this.props.loadKnot(knot.name);
+
     if (mustSeedState) {
       this.props.toggleModal();
+      this.props.loadState(knot.name);
     } else {
       this.props.history.push(`/saved-sync?knot=${knot.name}&mode=partial`);
-      this.props.loadKnot(knot.name);
     }
   };
 
