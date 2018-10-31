@@ -26,6 +26,7 @@ import { withRouter } from 'react-router-dom';
 import { Button, ButtonGroup } from 'reactstrap';
 import moment from 'moment';
 
+import { getSpecImplementationValue } from '../../../../utils/handlers';
 import getLogo from '../../../../logos';
 import styles from './Knot.css';
 import type { KnotType } from '../../../../utils/sharedTypes';
@@ -47,7 +48,8 @@ type Props = {
   loadKnot: (name: string) => void,
   generateUUID: () => void,
   toggleDelete: (knot: KnotType) => void,
-  toggleDownloadDisclaimer: (knot: KnotType) => void
+  toggleDownloadDisclaimer: (knot: KnotType) => void,
+  toggleModal: () => void
 };
 
 class Knot extends Component<Props> {
@@ -59,8 +61,17 @@ class Knot extends Component<Props> {
 
   partialSync = () => {
     const { knot } = this.props;
-    this.props.history.push(`/saved-sync?knot=${knot.name}&mode=partial`);
-    this.props.loadKnot(knot.name);
+    const mustSeedState = getSpecImplementationValue(
+      knot.tap.specImplementation,
+      'mustSeedState'
+    );
+
+    if (mustSeedState) {
+      this.props.toggleModal();
+    } else {
+      this.props.history.push(`/saved-sync?knot=${knot.name}&mode=partial`);
+      this.props.loadKnot(knot.name);
+    }
   };
 
   edit = () => {

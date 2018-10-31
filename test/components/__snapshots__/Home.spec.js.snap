@@ -273,656 +273,660 @@ exports[`Home component Detects when Docker is not running 1`] = `
 `;
 
 exports[`Home component Disables knot actions when Docker is not installed 1`] = `
-<div
-  className="container"
->
-  <p
-    className="h2 mb-3 clearfix"
+<div>
+  <div
+    className="container"
   >
-    Saved knots
-    <a
-      href="/taps"
-      onClick={[Function]}
+    <p
+      className="h2 mb-3 clearfix"
     >
-      <button
-        className="float-right btn btn-outline-secondary btn-sm disabled"
-        disabled={true}
+      Saved knots
+      <a
+        href="/taps"
         onClick={[Function]}
-        type={undefined}
       >
-        New knot
-      </button>
-    </a>
-  </p>
-  <table
-    className="table"
-  >
-    <thead
-      className="thead-light"
+        <button
+          className="float-right btn btn-outline-secondary btn-sm disabled"
+          disabled={true}
+          onClick={[Function]}
+          type={undefined}
+        >
+          New knot
+        </button>
+      </a>
+    </p>
+    <table
+      className="table"
     >
-      <tr>
-        <th
-          className="text-center pr-0"
-          style={
-            Object {
-              "width": "6em",
+      <thead
+        className="thead-light"
+      >
+        <tr>
+          <th
+            className="text-center pr-0"
+            style={
+              Object {
+                "width": "6em",
+              }
             }
-          }
-        >
-          Tap
-        </th>
-        <th
-          className="px-0 fit"
-        />
-        <th
-          className="text-center pl-0"
-          style={
-            Object {
-              "width": "6em",
+          >
+            Tap
+          </th>
+          <th
+            className="px-0 fit"
+          />
+          <th
+            className="text-center pl-0"
+            style={
+              Object {
+                "width": "6em",
+              }
             }
-          }
-        >
-          Target
-        </th>
-        <th>
-          Name
-        </th>
-        <th>
-          Last Run
-        </th>
-        <th
-          className="fit"
-        >
-          Actions
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td
-          className="align-middle text-center pr-0"
-        >
-          <img
-            alt="tap-redshift logo"
-            className="logo"
-            src="redshift"
-          />
-        </td>
-        <td
-          className="align-middle px-0 text-muted text-center"
-        >
-          <span
-            className="oi oi-chevron-right"
-          />
-        </td>
-        <td
-          className="align-middle text-center pr-0"
-        >
-          <img
-            alt="target-datadotworld logo"
-            className="logo"
-            src="datadotworld"
-          />
-        </td>
-        <th
-          className="align-middle"
-        >
-          knot1
-        </th>
-        <td
-          className="align-middle"
-        >
-          a few seconds ago
-        </td>
-        <td
-          className="fit align-middle"
-        >
-          <div
-            className="btn-group"
-            role="group"
           >
-            <button
-              className="btn btn-link btn btn-link disabled"
-              data-placement="top"
-              data-toggle="tooltip"
-              disabled={true}
-              onClick={[Function]}
-              style={
-                Object {
-                  "background": "white",
-                }
-              }
-              title="Sync new data"
-              type="button"
-            >
-              <span
-                className="oi oi-media-play"
-              />
-            </button>
-            <button
-              className="btn btn-link-secondary btn btn-link-secondary disabled"
-              data-placement="top"
-              data-toggle="tooltip"
-              disabled={true}
-              onClick={[Function]}
-              style={
-                Object {
-                  "background": "white",
-                }
-              }
-              title="Sync all data"
-              type="button"
-            >
-              <span
-                className="oi oi-reload"
-              />
-            </button>
-            <button
-              className="btn btn-link-secondary disabled"
-              disabled={true}
-              onClick={[Function]}
-              style={
-                Object {
-                  "background": "white",
-                }
-              }
-              title="Edit"
-              type="button"
-            >
-              <span
-                className="oi oi-pencil"
-              />
-            </button>
-            <button
-              className="btn btn-link-secondary"
-              onClick={[Function]}
-              style={
-                Object {
-                  "background": "white",
-                }
-              }
-              title="Export"
-              type="button"
-            >
-              <span
-                className="oi oi-cloud-download"
-              />
-            </button>
-            <button
-              className="btn btn-link-secondary"
-              onClick={[Function]}
-              style={
-                Object {
-                  "background": "white",
-                }
-              }
-              title="Delete"
-              type="button"
-            >
-              <span
-                className="oi oi-trash"
-              />
-            </button>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td
-          className="align-middle text-center pr-0"
-        >
-          <img
-            alt="tap-salesforce logo"
-            className="logo"
-            src="salesforce"
-          />
-        </td>
-        <td
-          className="align-middle px-0 text-muted text-center"
-        >
-          <span
-            className="oi oi-chevron-right"
-          />
-        </td>
-        <td
-          className="align-middle text-center pr-0"
-        >
-          <img
-            alt="target-stitch logo"
-            className="logo"
-            src="stitch"
-          />
-        </td>
-        <th
-          className="align-middle"
-        >
-          knot2
-        </th>
-        <td
-          className="align-middle"
-        >
-          a few seconds ago
-        </td>
-        <td
-          className="fit align-middle"
-        >
-          <div
-            className="btn-group"
-            role="group"
+            Target
+          </th>
+          <th>
+            Name
+          </th>
+          <th>
+            Last Run
+          </th>
+          <th
+            className="fit"
           >
-            <button
-              className="btn btn-link btn btn-link disabled"
-              data-placement="top"
-              data-toggle="tooltip"
-              disabled={true}
-              onClick={[Function]}
-              style={
-                Object {
-                  "background": "white",
-                }
-              }
-              title="Sync new data"
-              type="button"
+            Actions
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td
+            className="align-middle text-center pr-0"
+          >
+            <img
+              alt="tap-redshift logo"
+              className="logo"
+              src="redshift"
+            />
+          </td>
+          <td
+            className="align-middle px-0 text-muted text-center"
+          >
+            <span
+              className="oi oi-chevron-right"
+            />
+          </td>
+          <td
+            className="align-middle text-center pr-0"
+          >
+            <img
+              alt="target-datadotworld logo"
+              className="logo"
+              src="datadotworld"
+            />
+          </td>
+          <th
+            className="align-middle"
+          >
+            knot1
+          </th>
+          <td
+            className="align-middle"
+          >
+            a few seconds ago
+          </td>
+          <td
+            className="fit align-middle"
+          >
+            <div
+              className="btn-group"
+              role="group"
             >
-              <span
-                className="oi oi-media-play"
-              />
-            </button>
-            <button
-              className="btn btn-link-secondary btn btn-link-secondary disabled"
-              data-placement="top"
-              data-toggle="tooltip"
-              disabled={true}
-              onClick={[Function]}
-              style={
-                Object {
-                  "background": "white",
+              <button
+                className="btn btn-link btn btn-link disabled"
+                data-placement="top"
+                data-toggle="tooltip"
+                disabled={true}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "background": "white",
+                  }
                 }
-              }
-              title="Sync all data"
-              type="button"
-            >
-              <span
-                className="oi oi-reload"
-              />
-            </button>
-            <button
-              className="btn btn-link-secondary disabled"
-              disabled={true}
-              onClick={[Function]}
-              style={
-                Object {
-                  "background": "white",
+                title="Sync new data"
+                type="button"
+              >
+                <span
+                  className="oi oi-media-play"
+                />
+              </button>
+              <button
+                className="btn btn-link-secondary btn btn-link-secondary disabled"
+                data-placement="top"
+                data-toggle="tooltip"
+                disabled={true}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "background": "white",
+                  }
                 }
-              }
-              title="Edit"
-              type="button"
-            >
-              <span
-                className="oi oi-pencil"
-              />
-            </button>
-            <button
-              className="btn btn-link-secondary"
-              onClick={[Function]}
-              style={
-                Object {
-                  "background": "white",
+                title="Sync all data"
+                type="button"
+              >
+                <span
+                  className="oi oi-reload"
+                />
+              </button>
+              <button
+                className="btn btn-link-secondary disabled"
+                disabled={true}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "background": "white",
+                  }
                 }
-              }
-              title="Export"
-              type="button"
-            >
-              <span
-                className="oi oi-cloud-download"
-              />
-            </button>
-            <button
-              className="btn btn-link-secondary"
-              onClick={[Function]}
-              style={
-                Object {
-                  "background": "white",
+                title="Edit"
+                type="button"
+              >
+                <span
+                  className="oi oi-pencil"
+                />
+              </button>
+              <button
+                className="btn btn-link-secondary"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "background": "white",
+                  }
                 }
-              }
-              title="Delete"
-              type="button"
+                title="Export"
+                type="button"
+              >
+                <span
+                  className="oi oi-cloud-download"
+                />
+              </button>
+              <button
+                className="btn btn-link-secondary"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "background": "white",
+                  }
+                }
+                title="Delete"
+                type="button"
+              >
+                <span
+                  className="oi oi-trash"
+                />
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td
+            className="align-middle text-center pr-0"
+          >
+            <img
+              alt="tap-salesforce logo"
+              className="logo"
+              src="salesforce"
+            />
+          </td>
+          <td
+            className="align-middle px-0 text-muted text-center"
+          >
+            <span
+              className="oi oi-chevron-right"
+            />
+          </td>
+          <td
+            className="align-middle text-center pr-0"
+          >
+            <img
+              alt="target-stitch logo"
+              className="logo"
+              src="stitch"
+            />
+          </td>
+          <th
+            className="align-middle"
+          >
+            knot2
+          </th>
+          <td
+            className="align-middle"
+          >
+            a few seconds ago
+          </td>
+          <td
+            className="fit align-middle"
+          >
+            <div
+              className="btn-group"
+              role="group"
             >
-              <span
-                className="oi oi-trash"
-              />
-            </button>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+              <button
+                className="btn btn-link btn btn-link disabled"
+                data-placement="top"
+                data-toggle="tooltip"
+                disabled={true}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "background": "white",
+                  }
+                }
+                title="Sync new data"
+                type="button"
+              >
+                <span
+                  className="oi oi-media-play"
+                />
+              </button>
+              <button
+                className="btn btn-link-secondary btn btn-link-secondary disabled"
+                data-placement="top"
+                data-toggle="tooltip"
+                disabled={true}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "background": "white",
+                  }
+                }
+                title="Sync all data"
+                type="button"
+              >
+                <span
+                  className="oi oi-reload"
+                />
+              </button>
+              <button
+                className="btn btn-link-secondary disabled"
+                disabled={true}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "background": "white",
+                  }
+                }
+                title="Edit"
+                type="button"
+              >
+                <span
+                  className="oi oi-pencil"
+                />
+              </button>
+              <button
+                className="btn btn-link-secondary"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "background": "white",
+                  }
+                }
+                title="Export"
+                type="button"
+              >
+                <span
+                  className="oi oi-cloud-download"
+                />
+              </button>
+              <button
+                className="btn btn-link-secondary"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "background": "white",
+                  }
+                }
+                title="Delete"
+                type="button"
+              >
+                <span
+                  className="oi oi-trash"
+                />
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 `;
 
 exports[`Home component Disables knot actions when Docker is not running 1`] = `
-<div
-  className="container"
->
-  <p
-    className="h2 mb-3 clearfix"
+<div>
+  <div
+    className="container"
   >
-    Saved knots
-    <a
-      href="/taps"
-      onClick={[Function]}
+    <p
+      className="h2 mb-3 clearfix"
     >
-      <button
-        className="float-right btn btn-outline-secondary btn-sm disabled"
-        disabled={true}
+      Saved knots
+      <a
+        href="/taps"
         onClick={[Function]}
-        type={undefined}
       >
-        New knot
-      </button>
-    </a>
-  </p>
-  <table
-    className="table"
-  >
-    <thead
-      className="thead-light"
+        <button
+          className="float-right btn btn-outline-secondary btn-sm disabled"
+          disabled={true}
+          onClick={[Function]}
+          type={undefined}
+        >
+          New knot
+        </button>
+      </a>
+    </p>
+    <table
+      className="table"
     >
-      <tr>
-        <th
-          className="text-center pr-0"
-          style={
-            Object {
-              "width": "6em",
+      <thead
+        className="thead-light"
+      >
+        <tr>
+          <th
+            className="text-center pr-0"
+            style={
+              Object {
+                "width": "6em",
+              }
             }
-          }
-        >
-          Tap
-        </th>
-        <th
-          className="px-0 fit"
-        />
-        <th
-          className="text-center pl-0"
-          style={
-            Object {
-              "width": "6em",
+          >
+            Tap
+          </th>
+          <th
+            className="px-0 fit"
+          />
+          <th
+            className="text-center pl-0"
+            style={
+              Object {
+                "width": "6em",
+              }
             }
-          }
-        >
-          Target
-        </th>
-        <th>
-          Name
-        </th>
-        <th>
-          Last Run
-        </th>
-        <th
-          className="fit"
-        >
-          Actions
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td
-          className="align-middle text-center pr-0"
-        >
-          <img
-            alt="tap-redshift logo"
-            className="logo"
-            src="redshift"
-          />
-        </td>
-        <td
-          className="align-middle px-0 text-muted text-center"
-        >
-          <span
-            className="oi oi-chevron-right"
-          />
-        </td>
-        <td
-          className="align-middle text-center pr-0"
-        >
-          <img
-            alt="target-datadotworld logo"
-            className="logo"
-            src="datadotworld"
-          />
-        </td>
-        <th
-          className="align-middle"
-        >
-          knot1
-        </th>
-        <td
-          className="align-middle"
-        >
-          a few seconds ago
-        </td>
-        <td
-          className="fit align-middle"
-        >
-          <div
-            className="btn-group"
-            role="group"
           >
-            <button
-              className="btn btn-link btn btn-link disabled"
-              data-placement="top"
-              data-toggle="tooltip"
-              disabled={true}
-              onClick={[Function]}
-              style={
-                Object {
-                  "background": "white",
-                }
-              }
-              title="Sync new data"
-              type="button"
-            >
-              <span
-                className="oi oi-media-play"
-              />
-            </button>
-            <button
-              className="btn btn-link-secondary btn btn-link-secondary disabled"
-              data-placement="top"
-              data-toggle="tooltip"
-              disabled={true}
-              onClick={[Function]}
-              style={
-                Object {
-                  "background": "white",
-                }
-              }
-              title="Sync all data"
-              type="button"
-            >
-              <span
-                className="oi oi-reload"
-              />
-            </button>
-            <button
-              className="btn btn-link-secondary disabled"
-              disabled={true}
-              onClick={[Function]}
-              style={
-                Object {
-                  "background": "white",
-                }
-              }
-              title="Edit"
-              type="button"
-            >
-              <span
-                className="oi oi-pencil"
-              />
-            </button>
-            <button
-              className="btn btn-link-secondary"
-              onClick={[Function]}
-              style={
-                Object {
-                  "background": "white",
-                }
-              }
-              title="Export"
-              type="button"
-            >
-              <span
-                className="oi oi-cloud-download"
-              />
-            </button>
-            <button
-              className="btn btn-link-secondary"
-              onClick={[Function]}
-              style={
-                Object {
-                  "background": "white",
-                }
-              }
-              title="Delete"
-              type="button"
-            >
-              <span
-                className="oi oi-trash"
-              />
-            </button>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td
-          className="align-middle text-center pr-0"
-        >
-          <img
-            alt="tap-salesforce logo"
-            className="logo"
-            src="salesforce"
-          />
-        </td>
-        <td
-          className="align-middle px-0 text-muted text-center"
-        >
-          <span
-            className="oi oi-chevron-right"
-          />
-        </td>
-        <td
-          className="align-middle text-center pr-0"
-        >
-          <img
-            alt="target-stitch logo"
-            className="logo"
-            src="stitch"
-          />
-        </td>
-        <th
-          className="align-middle"
-        >
-          knot2
-        </th>
-        <td
-          className="align-middle"
-        >
-          a few seconds ago
-        </td>
-        <td
-          className="fit align-middle"
-        >
-          <div
-            className="btn-group"
-            role="group"
+            Target
+          </th>
+          <th>
+            Name
+          </th>
+          <th>
+            Last Run
+          </th>
+          <th
+            className="fit"
           >
-            <button
-              className="btn btn-link btn btn-link disabled"
-              data-placement="top"
-              data-toggle="tooltip"
-              disabled={true}
-              onClick={[Function]}
-              style={
-                Object {
-                  "background": "white",
-                }
-              }
-              title="Sync new data"
-              type="button"
+            Actions
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td
+            className="align-middle text-center pr-0"
+          >
+            <img
+              alt="tap-redshift logo"
+              className="logo"
+              src="redshift"
+            />
+          </td>
+          <td
+            className="align-middle px-0 text-muted text-center"
+          >
+            <span
+              className="oi oi-chevron-right"
+            />
+          </td>
+          <td
+            className="align-middle text-center pr-0"
+          >
+            <img
+              alt="target-datadotworld logo"
+              className="logo"
+              src="datadotworld"
+            />
+          </td>
+          <th
+            className="align-middle"
+          >
+            knot1
+          </th>
+          <td
+            className="align-middle"
+          >
+            a few seconds ago
+          </td>
+          <td
+            className="fit align-middle"
+          >
+            <div
+              className="btn-group"
+              role="group"
             >
-              <span
-                className="oi oi-media-play"
-              />
-            </button>
-            <button
-              className="btn btn-link-secondary btn btn-link-secondary disabled"
-              data-placement="top"
-              data-toggle="tooltip"
-              disabled={true}
-              onClick={[Function]}
-              style={
-                Object {
-                  "background": "white",
+              <button
+                className="btn btn-link btn btn-link disabled"
+                data-placement="top"
+                data-toggle="tooltip"
+                disabled={true}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "background": "white",
+                  }
                 }
-              }
-              title="Sync all data"
-              type="button"
-            >
-              <span
-                className="oi oi-reload"
-              />
-            </button>
-            <button
-              className="btn btn-link-secondary disabled"
-              disabled={true}
-              onClick={[Function]}
-              style={
-                Object {
-                  "background": "white",
+                title="Sync new data"
+                type="button"
+              >
+                <span
+                  className="oi oi-media-play"
+                />
+              </button>
+              <button
+                className="btn btn-link-secondary btn btn-link-secondary disabled"
+                data-placement="top"
+                data-toggle="tooltip"
+                disabled={true}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "background": "white",
+                  }
                 }
-              }
-              title="Edit"
-              type="button"
-            >
-              <span
-                className="oi oi-pencil"
-              />
-            </button>
-            <button
-              className="btn btn-link-secondary"
-              onClick={[Function]}
-              style={
-                Object {
-                  "background": "white",
+                title="Sync all data"
+                type="button"
+              >
+                <span
+                  className="oi oi-reload"
+                />
+              </button>
+              <button
+                className="btn btn-link-secondary disabled"
+                disabled={true}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "background": "white",
+                  }
                 }
-              }
-              title="Export"
-              type="button"
-            >
-              <span
-                className="oi oi-cloud-download"
-              />
-            </button>
-            <button
-              className="btn btn-link-secondary"
-              onClick={[Function]}
-              style={
-                Object {
-                  "background": "white",
+                title="Edit"
+                type="button"
+              >
+                <span
+                  className="oi oi-pencil"
+                />
+              </button>
+              <button
+                className="btn btn-link-secondary"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "background": "white",
+                  }
                 }
-              }
-              title="Delete"
-              type="button"
+                title="Export"
+                type="button"
+              >
+                <span
+                  className="oi oi-cloud-download"
+                />
+              </button>
+              <button
+                className="btn btn-link-secondary"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "background": "white",
+                  }
+                }
+                title="Delete"
+                type="button"
+              >
+                <span
+                  className="oi oi-trash"
+                />
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td
+            className="align-middle text-center pr-0"
+          >
+            <img
+              alt="tap-salesforce logo"
+              className="logo"
+              src="salesforce"
+            />
+          </td>
+          <td
+            className="align-middle px-0 text-muted text-center"
+          >
+            <span
+              className="oi oi-chevron-right"
+            />
+          </td>
+          <td
+            className="align-middle text-center pr-0"
+          >
+            <img
+              alt="target-stitch logo"
+              className="logo"
+              src="stitch"
+            />
+          </td>
+          <th
+            className="align-middle"
+          >
+            knot2
+          </th>
+          <td
+            className="align-middle"
+          >
+            a few seconds ago
+          </td>
+          <td
+            className="fit align-middle"
+          >
+            <div
+              className="btn-group"
+              role="group"
             >
-              <span
-                className="oi oi-trash"
-              />
-            </button>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+              <button
+                className="btn btn-link btn btn-link disabled"
+                data-placement="top"
+                data-toggle="tooltip"
+                disabled={true}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "background": "white",
+                  }
+                }
+                title="Sync new data"
+                type="button"
+              >
+                <span
+                  className="oi oi-media-play"
+                />
+              </button>
+              <button
+                className="btn btn-link-secondary btn btn-link-secondary disabled"
+                data-placement="top"
+                data-toggle="tooltip"
+                disabled={true}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "background": "white",
+                  }
+                }
+                title="Sync all data"
+                type="button"
+              >
+                <span
+                  className="oi oi-reload"
+                />
+              </button>
+              <button
+                className="btn btn-link-secondary disabled"
+                disabled={true}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "background": "white",
+                  }
+                }
+                title="Edit"
+                type="button"
+              >
+                <span
+                  className="oi oi-pencil"
+                />
+              </button>
+              <button
+                className="btn btn-link-secondary"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "background": "white",
+                  }
+                }
+                title="Export"
+                type="button"
+              >
+                <span
+                  className="oi oi-cloud-download"
+                />
+              </button>
+              <button
+                className="btn btn-link-secondary"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "background": "white",
+                  }
+                }
+                title="Delete"
+                type="button"
+              >
+                <span
+                  className="oi oi-trash"
+                />
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 `;
 
@@ -1013,328 +1017,330 @@ exports[`Home component Shows jumbotron when there are no saved knots 1`] = `
 `;
 
 exports[`Home component Shows saved knots 1`] = `
-<div
-  className="container"
->
-  <p
-    className="h2 mb-3 clearfix"
+<div>
+  <div
+    className="container"
   >
-    Saved knots
-    <a
-      href="/taps"
-      onClick={[Function]}
+    <p
+      className="h2 mb-3 clearfix"
     >
-      <button
-        className="float-right btn btn-outline-secondary btn-sm"
-        disabled={false}
+      Saved knots
+      <a
+        href="/taps"
         onClick={[Function]}
-        type={undefined}
       >
-        New knot
-      </button>
-    </a>
-  </p>
-  <table
-    className="table"
-  >
-    <thead
-      className="thead-light"
+        <button
+          className="float-right btn btn-outline-secondary btn-sm"
+          disabled={false}
+          onClick={[Function]}
+          type={undefined}
+        >
+          New knot
+        </button>
+      </a>
+    </p>
+    <table
+      className="table"
     >
-      <tr>
-        <th
-          className="text-center pr-0"
-          style={
-            Object {
-              "width": "6em",
+      <thead
+        className="thead-light"
+      >
+        <tr>
+          <th
+            className="text-center pr-0"
+            style={
+              Object {
+                "width": "6em",
+              }
             }
-          }
-        >
-          Tap
-        </th>
-        <th
-          className="px-0 fit"
-        />
-        <th
-          className="text-center pl-0"
-          style={
-            Object {
-              "width": "6em",
+          >
+            Tap
+          </th>
+          <th
+            className="px-0 fit"
+          />
+          <th
+            className="text-center pl-0"
+            style={
+              Object {
+                "width": "6em",
+              }
             }
-          }
-        >
-          Target
-        </th>
-        <th>
-          Name
-        </th>
-        <th>
-          Last Run
-        </th>
-        <th
-          className="fit"
-        >
-          Actions
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td
-          className="align-middle text-center pr-0"
-        >
-          <img
-            alt="tap-redshift logo"
-            className="logo"
-            src="redshift"
-          />
-        </td>
-        <td
-          className="align-middle px-0 text-muted text-center"
-        >
-          <span
-            className="oi oi-chevron-right"
-          />
-        </td>
-        <td
-          className="align-middle text-center pr-0"
-        >
-          <img
-            alt="target-datadotworld logo"
-            className="logo"
-            src="datadotworld"
-          />
-        </td>
-        <th
-          className="align-middle"
-        >
-          knot1
-        </th>
-        <td
-          className="align-middle"
-        >
-          a few seconds ago
-        </td>
-        <td
-          className="fit align-middle"
-        >
-          <div
-            className="btn-group"
-            role="group"
           >
-            <button
-              className="btn btn-link btn btn-link"
-              data-placement="top"
-              data-toggle="tooltip"
-              disabled={false}
-              onClick={[Function]}
-              style={
-                Object {
-                  "background": "white",
-                }
-              }
-              title="Sync new data"
-              type="button"
-            >
-              <span
-                className="oi oi-media-play"
-              />
-            </button>
-            <button
-              className="btn btn-link-secondary btn btn-link-secondary"
-              data-placement="top"
-              data-toggle="tooltip"
-              disabled={false}
-              onClick={[Function]}
-              style={
-                Object {
-                  "background": "white",
-                }
-              }
-              title="Sync all data"
-              type="button"
-            >
-              <span
-                className="oi oi-reload"
-              />
-            </button>
-            <button
-              className="btn btn-link-secondary"
-              disabled={false}
-              onClick={[Function]}
-              style={
-                Object {
-                  "background": "white",
-                }
-              }
-              title="Edit"
-              type="button"
-            >
-              <span
-                className="oi oi-pencil"
-              />
-            </button>
-            <button
-              className="btn btn-link-secondary"
-              onClick={[Function]}
-              style={
-                Object {
-                  "background": "white",
-                }
-              }
-              title="Export"
-              type="button"
-            >
-              <span
-                className="oi oi-cloud-download"
-              />
-            </button>
-            <button
-              className="btn btn-link-secondary"
-              onClick={[Function]}
-              style={
-                Object {
-                  "background": "white",
-                }
-              }
-              title="Delete"
-              type="button"
-            >
-              <span
-                className="oi oi-trash"
-              />
-            </button>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td
-          className="align-middle text-center pr-0"
-        >
-          <img
-            alt="tap-salesforce logo"
-            className="logo"
-            src="salesforce"
-          />
-        </td>
-        <td
-          className="align-middle px-0 text-muted text-center"
-        >
-          <span
-            className="oi oi-chevron-right"
-          />
-        </td>
-        <td
-          className="align-middle text-center pr-0"
-        >
-          <img
-            alt="target-stitch logo"
-            className="logo"
-            src="stitch"
-          />
-        </td>
-        <th
-          className="align-middle"
-        >
-          knot2
-        </th>
-        <td
-          className="align-middle"
-        >
-          a few seconds ago
-        </td>
-        <td
-          className="fit align-middle"
-        >
-          <div
-            className="btn-group"
-            role="group"
+            Target
+          </th>
+          <th>
+            Name
+          </th>
+          <th>
+            Last Run
+          </th>
+          <th
+            className="fit"
           >
-            <button
-              className="btn btn-link btn btn-link"
-              data-placement="top"
-              data-toggle="tooltip"
-              disabled={false}
-              onClick={[Function]}
-              style={
-                Object {
-                  "background": "white",
-                }
-              }
-              title="Sync new data"
-              type="button"
+            Actions
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td
+            className="align-middle text-center pr-0"
+          >
+            <img
+              alt="tap-redshift logo"
+              className="logo"
+              src="redshift"
+            />
+          </td>
+          <td
+            className="align-middle px-0 text-muted text-center"
+          >
+            <span
+              className="oi oi-chevron-right"
+            />
+          </td>
+          <td
+            className="align-middle text-center pr-0"
+          >
+            <img
+              alt="target-datadotworld logo"
+              className="logo"
+              src="datadotworld"
+            />
+          </td>
+          <th
+            className="align-middle"
+          >
+            knot1
+          </th>
+          <td
+            className="align-middle"
+          >
+            a few seconds ago
+          </td>
+          <td
+            className="fit align-middle"
+          >
+            <div
+              className="btn-group"
+              role="group"
             >
-              <span
-                className="oi oi-media-play"
-              />
-            </button>
-            <button
-              className="btn btn-link-secondary btn btn-link-secondary"
-              data-placement="top"
-              data-toggle="tooltip"
-              disabled={false}
-              onClick={[Function]}
-              style={
-                Object {
-                  "background": "white",
+              <button
+                className="btn btn-link btn btn-link"
+                data-placement="top"
+                data-toggle="tooltip"
+                disabled={false}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "background": "white",
+                  }
                 }
-              }
-              title="Sync all data"
-              type="button"
-            >
-              <span
-                className="oi oi-reload"
-              />
-            </button>
-            <button
-              className="btn btn-link-secondary"
-              disabled={false}
-              onClick={[Function]}
-              style={
-                Object {
-                  "background": "white",
+                title="Sync new data"
+                type="button"
+              >
+                <span
+                  className="oi oi-media-play"
+                />
+              </button>
+              <button
+                className="btn btn-link-secondary btn btn-link-secondary"
+                data-placement="top"
+                data-toggle="tooltip"
+                disabled={false}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "background": "white",
+                  }
                 }
-              }
-              title="Edit"
-              type="button"
-            >
-              <span
-                className="oi oi-pencil"
-              />
-            </button>
-            <button
-              className="btn btn-link-secondary"
-              onClick={[Function]}
-              style={
-                Object {
-                  "background": "white",
+                title="Sync all data"
+                type="button"
+              >
+                <span
+                  className="oi oi-reload"
+                />
+              </button>
+              <button
+                className="btn btn-link-secondary"
+                disabled={false}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "background": "white",
+                  }
                 }
-              }
-              title="Export"
-              type="button"
-            >
-              <span
-                className="oi oi-cloud-download"
-              />
-            </button>
-            <button
-              className="btn btn-link-secondary"
-              onClick={[Function]}
-              style={
-                Object {
-                  "background": "white",
+                title="Edit"
+                type="button"
+              >
+                <span
+                  className="oi oi-pencil"
+                />
+              </button>
+              <button
+                className="btn btn-link-secondary"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "background": "white",
+                  }
                 }
-              }
-              title="Delete"
-              type="button"
+                title="Export"
+                type="button"
+              >
+                <span
+                  className="oi oi-cloud-download"
+                />
+              </button>
+              <button
+                className="btn btn-link-secondary"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "background": "white",
+                  }
+                }
+                title="Delete"
+                type="button"
+              >
+                <span
+                  className="oi oi-trash"
+                />
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td
+            className="align-middle text-center pr-0"
+          >
+            <img
+              alt="tap-salesforce logo"
+              className="logo"
+              src="salesforce"
+            />
+          </td>
+          <td
+            className="align-middle px-0 text-muted text-center"
+          >
+            <span
+              className="oi oi-chevron-right"
+            />
+          </td>
+          <td
+            className="align-middle text-center pr-0"
+          >
+            <img
+              alt="target-stitch logo"
+              className="logo"
+              src="stitch"
+            />
+          </td>
+          <th
+            className="align-middle"
+          >
+            knot2
+          </th>
+          <td
+            className="align-middle"
+          >
+            a few seconds ago
+          </td>
+          <td
+            className="fit align-middle"
+          >
+            <div
+              className="btn-group"
+              role="group"
             >
-              <span
-                className="oi oi-trash"
-              />
-            </button>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+              <button
+                className="btn btn-link btn btn-link"
+                data-placement="top"
+                data-toggle="tooltip"
+                disabled={false}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "background": "white",
+                  }
+                }
+                title="Sync new data"
+                type="button"
+              >
+                <span
+                  className="oi oi-media-play"
+                />
+              </button>
+              <button
+                className="btn btn-link-secondary btn btn-link-secondary"
+                data-placement="top"
+                data-toggle="tooltip"
+                disabled={false}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "background": "white",
+                  }
+                }
+                title="Sync all data"
+                type="button"
+              >
+                <span
+                  className="oi oi-reload"
+                />
+              </button>
+              <button
+                className="btn btn-link-secondary"
+                disabled={false}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "background": "white",
+                  }
+                }
+                title="Edit"
+                type="button"
+              >
+                <span
+                  className="oi oi-pencil"
+                />
+              </button>
+              <button
+                className="btn btn-link-secondary"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "background": "white",
+                  }
+                }
+                title="Export"
+                type="button"
+              >
+                <span
+                  className="oi oi-cloud-download"
+                />
+              </button>
+              <button
+                className="btn btn-link-secondary"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "background": "white",
+                  }
+                }
+                title="Delete"
+                type="button"
+              >
+                <span
+                  className="oi oi-trash"
+                />
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 `;

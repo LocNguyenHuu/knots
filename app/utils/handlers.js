@@ -135,6 +135,6 @@ export const validateFields = (
 };
 
 export const getSpecImplementationValue = (
-  specImplementation: SpecImplementation,
+  specImplementation: ?SpecImplementation,
   field: string
 ) => get(specImplementation, field);
