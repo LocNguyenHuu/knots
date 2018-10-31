@@ -31,7 +31,13 @@ import {
   Modal,
   ModalHeader,
   ModalBody,
-  ModalFooter
+  ModalFooter,
+  Form,
+  FormGroup,
+  FormFeedback,
+  FormText,
+  Input,
+  Label
 } from 'reactstrap';
 import type { KnotType } from '../../../utils/sharedTypes';
 
@@ -92,6 +98,12 @@ class Knots extends Component<Props, State> {
     this.setState((previousState) => ({
       seedStateModalOpen: !previousState.seedStateModalOpen
     }));
+  };
+
+  handleReplicationDateChange = (event) => {
+    const { value } = event.currentTarget;
+
+    console.log('THe value', value);
   };
 
   render() {
@@ -163,21 +175,30 @@ class Knots extends Component<Props, State> {
           </Table>
         </Container>
         <Modal isOpen={seedStateModalOpen}>
-          <ModalHeader>Modal title</ModalHeader>
+          <ModalHeader>Create the initial state file</ModalHeader>
           <ModalBody>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            <Form>
+              <FormGroup>
+                <Label for="replication_date">
+                  Date (for creating initial state file)
+                </Label>
+                <Input
+                  type="date"
+                  onChange={this.handleReplicationDateChange}
+                />
+                <FormFeedback>Required</FormFeedback>
+                <FormText>
+                  Date for the streams to force the application to only fetch
+                  data newer than this date.
+                </FormText>
+              </FormGroup>
+            </Form>
           </ModalBody>
           <ModalFooter>
             <Button color="secondary" onClick={this.toggleModal}>
               Cancel
             </Button>
-            <Button color="primary">Do Something</Button>{' '}
+            <Button color="primary">Continue</Button>
           </ModalFooter>
         </Modal>
       </div>
